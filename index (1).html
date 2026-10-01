@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ur-Latn"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Paisa Plan</title>
+<style>
+:root{--bg:#f4f7f5;--cd:#fff;--tx:#13231c;--mu:#66756d;--pr:#0f6b53;--pl:#e0f2ea;--rd:#c8372d;--rl:#fdeceb;--gn:#18894a;--bd:#e2e8e4;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1714;--cd:#18231f;--tx:#e8f1ec;--mu:#92a39a;--pr:#3fc79a;--pl:#173a2f;--rd:#ff7b6e;--rl:#3a1d1a;--gn:#5fd68c;--bd:#26352f;--on:#06241a}}
+:root[data-theme="dark"]{--bg:#0f1714;--cd:#18231f;--tx:#e8f1ec;--mu:#92a39a;--pr:#3fc79a;--pl:#173a2f;--rd:#ff7b6e;--rl:#3a1d1a;--gn:#5fd68c;--bd:#26352f;--on:#06241a}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+#app{max-width:520px;margin:auto;padding:12px 14px 100px}
+.hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.hd b{font-size:20px}
+.mn{display:flex;align-items:center;gap:6px}.ib{border:1px solid var(--bd);background:var(--cd);color:var(--tx);width:38px;height:38px;border-radius:50%;font-size:20px}
+.cd{background:var(--cd);border:1px solid var(--bd);border-radius:16px;padding:14px;margin-bottom:12px}
+.hero{background:var(--pr);color:var(--on);border:0}.big{font-size:36px;font-weight:700;margin:2px 0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}.g2 .cd{margin:0}.g2 small,.mu{color:var(--mu)}.g2 b{font-size:20px;display:block}
+h3{margin:0 0 8px}.sm{font-size:13px}
+.wr{background:var(--rl);color:var(--rd);border-radius:14px;padding:12px;margin-bottom:12px;font-weight:600}.wr.ok{background:var(--pl);color:var(--pr)}
+.rw{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--bd)}.rw:first-of-type{border-top:0}
+.em{width:42px;height:42px;border-radius:12px;background:var(--pl);display:grid;place-items:center;font-size:22px;flex:none}
+.fx{flex:1;min-width:0}.fx div{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.am{font-weight:700;white-space:nowrap}.in{color:var(--gn)}.ex{color:var(--rd)}.sv{color:var(--pr)}
+.ck{border:0;background:var(--pr);color:var(--on);border-radius:10px;padding:9px 11px;font-size:14px;font-weight:600}
+.bt{border:0;background:var(--pr);color:var(--on);border-radius:14px;padding:15px;font-size:17px;font-weight:700;width:100%}
+.bt.in2{background:var(--gn)}.bt.ex2{background:var(--rd)}.bt.s{background:var(--pl);color:var(--pr)}.bt.d{background:var(--rl);color:var(--rd)}
+.g2b{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}.g2b .bt{font-size:15px}
+.bar{height:10px;border-radius:6px;background:var(--bd);overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:var(--pr)}
+nav{position:fixed;left:0;right:0;bottom:0;background:var(--cd);border-top:1px solid var(--bd);display:flex;justify-content:center;padding-bottom:env(safe-area-inset-bottom,0px);z-index:5}
+nav div{display:flex;width:100%;max-width:520px}nav button{flex:1;border:0;background:none;color:var(--mu);padding:8px 0 6px;font-size:12px}
+nav button span{display:block;font-size:22px}nav button.a{color:var(--pr);font-weight:700}
+#ov{position:fixed;inset:0;background:#0007;display:none;align-items:flex-end;justify-content:center;z-index:9}
+#sh{background:var(--cd);width:100%;max-width:520px;border-radius:20px 20px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom,0px));max-height:92%;overflow:auto}
+label{display:block;font-size:14px;color:var(--mu);margin:12px 0 5px}
+input{width:100%;padding:13px;border-radius:12px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit;font-size:18px}
+input.lg{font-size:28px;font-weight:700;text-align:center}
+.sg{display:flex;gap:8px;margin-bottom:6px}.sg button{flex:1;padding:12px 6px;border-radius:12px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font-size:15px}.sg button.a{background:var(--pr);color:var(--on);border-color:var(--pr);font-weight:700}
+.ch{display:flex;gap:6px;flex-wrap:wrap}.ch button{border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:20px;padding:8px 12px;font-size:15px}.ch button.a{background:var(--pl);border-color:var(--pr)}
+.tt{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(90px + env(safe-area-inset-bottom,0px));background:#222;color:#fff;padding:10px 16px;border-radius:20px;z-index:20}
+</style></head><body><div id="app"></div><nav><div id="nv"></div></nav><div id="ov" onclick="if(event.target==this)cl()"><div id="sh"></div></div>
+<script>
+const K='pp_v2',$=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fm=n=>(n<0?'-':'')+'Rs '+Math.round(Math.abs(n)).toLocaleString('en-US');
+const dd=n=>{let d=new Date();d.setDate(d.getDate()+n);return d.toLocaleDateString('en-CA')},td=dd(0);
+const EX=[['🏠','Rent'],['⚡','Bijli'],['🥛','Milk'],['🛒','Rashan'],['🥬','Sabzi'],['⛽','Petrol'],['🎓','Fees'],['🤝','Committee'],['💸','Udhar'],['🌾','Gandum'],['💊','Dawai'],['🎁','Treats']],IN=[['💼','Kaam / Tankhwah'],['👨‍👦','Bhai / Rishtedaar'],['💸','Udhar wapsi'],['⛽','Petrol'],['🤝','Committee']];
+let S;try{S=JSON.parse(localStorage.getItem(K))}catch(e){}
+if(!S||!S.tx)S={setup:0,step:0,cash:0,goal:0,lastBk:0,tx:[]};
+const save=()=>{try{localStorage.setItem(K,JSON.stringify(S))}catch(e){}};
+try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch(e){}
+let tab='home',M=td.slice(0,7),ed=null,F={},AK,RT='';
+const mlab=m=>new Date(m+'-15').toLocaleDateString('en-GB',{month:'long',year:'numeric'}),sh=(m,n)=>{let d=new Date(m+'-15');d.setMonth(d.getMonth()+n);return d.toLocaleDateString('en-CA').slice(0,7)};
+const sum=a=>a.reduce((s,x)=>s+x.a,0),dl8=d=>new Date(d).toLocaleDateString('en-GB',{day:'numeric',month:'short'});
+function stats(m){const end=m+'-31',A=S.tx,dn=A.filter(x=>!x.p&&x.d<=end),cash=S.cash+dn.reduce((s,x)=>s+(x.t=='in'?x.a:-x.a),0);
+const pend=A.filter(x=>x.p&&x.d<=end).sort((a,b)=>a.d.localeCompare(b.d)||(a.t=='in'?0:1)-(b.t=='in'?0:1));let r=cash,low=null;
+pend.forEach(x=>{r+=x.t=='in'?x.a:-x.a;x.r=r;if(r<0&&!low)low=x});
+const mo=A.filter(x=>x.d.startsWith(m)&&!x.p),g=t=>sum(mo.filter(x=>x.t==t)),pin=sum(pend.filter(x=>x.t=='in')),pout=sum(pend.filter(x=>x.t!='in')),sav=g('sv');
+const proj=cash+pin-pout,after=proj-Math.max(0,S.goal-sav);
+return{cash,pend,pin,pout,proj,low,inc:g('in'),exp:g('ex'),sav,after,tsv:sum(A.filter(x=>x.t=='sv'&&!x.p))}}
+const row=(x,ck)=>`<div class="rw" onclick="sheet('${x.id}')"><div class="em">${x.e||'💰'}</div><div class="fx"><div><b>${esc(x.c)}</b></div><div class="mu sm">${dl8(x.d)}${x.p?(x.d<td?' · ⚠️ late':' · baqi'):''}${x.r!=null?' · iske baad paas: '+fm(x.r):''}</div></div><div class="am ${x.t}">${x.t=='in'?'+':'-'}${fm(x.a).replace('Rs ','')}</div>${x.p&&ck!==0?`<button class="ck" onclick="event.stopPropagation();done('${x.id}')">${x.t=='in'?'Mil gaye ✓':'De diye ✓'}</button>`:''}</div>`;
+const V={
+home(){const s=stats(M),late=S.tx.length&&Date.now()-S.lastBk>6048e5;
+return`<div class="cd hero"><div>💵 Abhi aapke paas</div><div class="big">${fm(s.cash)}</div></div>
+<div class="g2"><div class="cd"><small>⬇️ Aane wale</small><b class="in">${fm(s.pin)}</b></div><div class="cd"><small>⬆️ Dene wale</small><b class="ex">${fm(s.pout)}</b></div></div>
+<div class="cd"><div>Sab aane aur dene ke baad</div><div class="big ${s.proj<0?'ex':''}" style="font-size:28px">${fm(s.proj)}</div><div class="bar"><i style="width:${S.goal?Math.min(100,Math.max(0,s.sav/S.goal*100)):0}%"></i></div><div class="sm mu">🐷 Saving: ${fm(s.sav)} / ${fm(S.goal)}</div></div>
+<div class="wr ${s.after>=0?'ok':''}">${s.after>=0?`✅ Saving goal pura ho jayega. Phir bhi ${fm(s.after)} bachenge.`:`⚠️ Saving goal ke liye ${fm(-s.after)} kam hain.`}</div>
+${s.low?`<div class="wr">⚠️ ${dl8(s.low.d)} ko ${fm(-s.low.r)} ki kami ho sakti hai (${esc(s.low.c)}).</div>`:''}
+${late?`<div class="wr" onclick="tab='more';R()">🔒 Backup purana hai. Zyada mein jaakar backup banayein.</div>`:''}
+<div class="g2b"><button class="bt in2" onclick="sheet(null,'in')">💰 Paisa aana hai / aaya</button><button class="bt ex2" onclick="sheet(null,'ex')">🧾 Kharcha / dena hai</button></div>
+<div class="cd"><h3>Agli payments</h3>${s.pend.slice(0,4).map(x=>row(x)).join('')||'<div class="mu">Koi baqi payment nahi 🎉</div>'}</div>`},
+baqi(){const s=stats(M);return`<div class="cd"><h3>Baqi payments</h3><div class="sm mu">Jab paise mil jayen ya de dein to hare button ko dabayen.</div></div><div class="cd">${s.pend.map(x=>row(x)).join('')||'<div class="mu">Sab clear ✅</div>'}</div><div class="g2b"><button class="bt in2" onclick="sheet(null,'in',1)">💰 Aane wala add</button><button class="bt ex2" onclick="sheet(null,'ex',1)">🧾 Dena wala add</button></div>`},
+hisaab(){const s=stats(M),L=S.tx.filter(x=>x.d.startsWith(M)&&!x.p).sort((a,b)=>b.d.localeCompare(a.d));
+return`<div class="g2"><div class="cd"><small>Aamdani</small><b class="in">${fm(s.inc)}</b></div><div class="cd"><small>Kharcha</small><b class="ex">${fm(s.exp)}</b></div></div><div class="cd">${L.map(x=>row(x)).join('')||'<div class="mu">Is mahine koi entry nahi.</div>'}</div>`},
+saving(){const s=stats(M),ms=[...new Set(S.tx.filter(x=>x.t=='sv'&&!x.p).map(x=>x.d.slice(0,7)))].sort().reverse();
+return`<div class="cd hero"><div>🐷 Total saving</div><div class="big">${fm(s.tsv)}</div></div><div class="cd"><h3>${mlab(M)} ka goal</h3><div class="bar"><i style="width:${S.goal?Math.min(100,s.sav/S.goal*100):0}%"></i></div><div>${fm(s.sav)} / ${fm(S.goal)}</div><label>Goal badlein</label><input type="number" inputmode="numeric" value="${S.goal}" onchange="S.goal=+this.value||0;save();R()"><div style="margin-top:12px"><button class="bt" onclick="sheet(null,'sv')">🐷 Saving alag ki</button></div></div><div class="cd"><h3>Mahine ke hisaab se</h3>${ms.map(m=>`<div class="rw"><div class="fx">${mlab(m)}</div><div class="am sv">${fm(sum(S.tx.filter(x=>x.t=='sv'&&!x.p&&x.d.startsWith(m))))}</div></div>`).join('')||'<div class="mu">Abhi koi saving nahi.</div>'}</div><div class="sm mu">Saving ka asal paisa khud alag rakhein; yahan sirf record hai.</div>`},
+more(){return`<div class="cd"><h3>Settings</h3><label>Abhi mere paas (shuruati cash)</label><input type="number" inputmode="numeric" value="${S.cash}" onchange="S.cash=+this.value||0;save();R()"></div>
+<div class="cd"><h3>🔒 Mehfooz backup</h3><div class="sm mu">Backup password se lock hota hai. Password bhool gaye to file khul nahi sakegi, is liye yaad rakhein. ${S.lastBk?'Akhri backup: '+new Date(S.lastBk).toLocaleDateString('en-GB'):'Abhi backup nahi liya.'}</div><div style="margin-top:12px;display:grid;gap:10px"><button class="bt" onclick="bkSheet()">⬇️ Backup file banayein</button><button class="bt s" onclick="slipSheet()">🧾 Hisaab ki slip (PDF) banayein</button><label class="bt s" style="margin:0;text-align:center">📂 Backup se wapas laayein<input type="file" accept=".json,application/json" style="display:none" onchange="pick(this)"></label></div></div>
+<div class="cd"><button class="bt d" onclick="ask('Sara data delete ho jayega. Pakka?',()=>{S={setup:0,step:0,cash:0,goal:0,lastBk:0,tx:[]};save();R()})">🗑️ Sab data saaf karein</button></div>`}};
+function wiz(){const s=S.step,T=['Abhi aapke paas kitne paise hain?','Kaun se paise aane wale hain?','Kaun se kharche / payments dene hain?','Is mahine kitni saving karni hai?'][s];let b='';
+if(s==0)b=`<input id="w" class="lg" type="number" inputmode="numeric" value="${S.cash||''}" placeholder="Rs 0"><div class="sm mu" style="margin-top:8px">Jeb, bank, JazzCash, Easypaisa sab milakar.</div>`;
+if(s==3)b=`<input id="w" class="lg" type="number" inputmode="numeric" value="${S.goal||''}" placeholder="Rs 0"><div class="sm mu" style="margin-top:8px">Har mahine kam az kam itna bachana hai.</div>`;
+if(s==1||s==2){const t=s==1?'in':'ex';b=`<div>${S.tx.filter(x=>x.t==t).map(x=>row(x,0)).join('')||'<div class="mu">Abhi kuch add nahi kiya. Na ho to Aage dabayen.</div>'}</div><div style="margin-top:12px"><button class="bt ${t}2" onclick="sheet(null,'${t}',1)">${t=='in'?'💰 Aane wala paisa add karein':'🧾 Kharcha add karein'}</button></div>`}
+return`<div class="hd"><b>💚 Paisa Plan</b><span class="mu">Step ${s+1}/4</span></div><div class="bar"><i style="width:${(s+1)*25}%"></i></div><div class="cd"><h3 style="font-size:21px">${T}</h3>${b}</div><div class="sg">${s?'<button onclick="wn(-1)">⬅️ Wapas</button>':''}<button class="a" onclick="wn(1)">${s==3?'✅ Shuru karein':'Aage ➡️'}</button></div>`}
+function wn(d){const w=$('#w');if(w){const v=+w.value||0;if(S.step==0)S.cash=v;else S.goal=v}S.step+=d;if(S.step>3){S.step=3;S.setup=1}save();R()}
+function R(){if(!S.setup){$('#app').innerHTML=wiz();$('#nv').innerHTML='';return}
+$('#app').innerHTML=`<div class="hd"><b>💚 Paisa Plan</b><div class="mn"><button class="ib" onclick="M=sh(M,-1);R()">‹</button><span class="sm" style="min-width:96px;text-align:center">${mlab(M)}</span><button class="ib" onclick="M=sh(M,1);R()">›</button></div></div>`+V[tab]();
+$('#nv').innerHTML=[['home','🏠','Home'],['baqi','⏳','Baqi'],['hisaab','🧾','Hisaab'],['saving','🐷','Saving'],['more','⚙️','Zyada']].map(([k,i,l])=>`<button class="${tab==k?'a':''}" onclick="tab='${k}';R();scrollTo(0,0)"><span>${i}</span>${l}</button>`).join('')}
+const show=h=>{$('#sh').innerHTML=h;$('#ov').style.display='flex'},cl=()=>{$('#ov').style.display='none'};
+function toast(m){const e=document.createElement('div');e.className='tt';e.textContent=m;document.body.appendChild(e);setTimeout(()=>e.remove(),2200)}
+function ask(m,f){AK=f;show(`<h3>${m}</h3><div class="sg"><button onclick="cl()">Nahi</button><button class="a" onclick="cl();AK()">Haan</button></div>`)}
+function done(id){S.tx.find(y=>y.id==id).p=0;save();R();toast('Record ho gaya ✓')}
+function sheet(id,t,p){ed=id?S.tx.find(x=>x.id==id):null;F=ed?{...ed}:{t,c:'',e:t=='sv'?'🐷':'',a:'',d:td,p:(p||!S.setup)&&t!='sv'?1:0};fs()}
+function fs(){const t=F.t,L=t=='in'?IN:EX,sv=t=='sv';
+show(`<h3>${ed?'Badlein':sv?'🐷 Saving alag ki':t=='in'?'💰 Paisa aana hai / aaya':'🧾 Kharcha / dena hai'}</h3>
+${sv?'':`<label>Kis ke liye? (dabayen ya likhein)</label><div class="ch">${L.map((c,i)=>`<button class="${F.c==c[1]?'a':''}" onclick="pk(${i})">${c[0]} ${c[1]}</button>`).join('')}</div><input id="fc" value="${esc(F.c)}" placeholder="Naam likhein" style="margin-top:8px">`}
+<label>Kitne paise (Rs)?</label><input id="fa" class="lg" type="number" inputmode="numeric" value="${F.a}" placeholder="0">
+<label>${sv?'Tareekh':'Kis tareekh ko?'}</label><div class="sg">${[['Aaj',0],['Kal',1],['7 din baad',7]].map(([l,n])=>`<button class="${F.d==dd(n)?'a':''}" onclick="gf();F.d=dd(${n});fs()">${l}</button>`).join('')}</div><input id="fd" type="date" value="${F.d}">
+${sv?'':`<label>Abhi ho chuka ya baad mein hoga?</label><div class="sg"><button class="${F.p?'':'a'}" onclick="gf();F.p=0;fs()">✅ Ho chuka</button><button class="${F.p?'a':''}" onclick="gf();F.p=1;fs()">⏳ Baqi hai</button></div>`}
+<div style="margin-top:14px;display:grid;gap:8px"><button class="bt" onclick="sv_()">Save karein</button>${ed?'<button class="bt d" onclick="del()">🗑️ Delete</button>':''}<button class="bt s" onclick="cl()">Cancel</button></div>`)}
+function gf(){F.a=$('#fa').value;F.d=$('#fd').value||F.d;const c=$('#fc');if(c)F.c=c.value}
+function pk(i){gf();const c=(F.t=='in'?IN:EX)[i];F.c=c[1];F.e=c[0];fs()}
+function sv_(){gf();const a=+F.a;if(!(a>0))return toast('Paise likhein');if(!F.d)return toast('Tareekh chunein');
+const c=F.c.trim()||(F.t=='sv'?'Saving':F.t=='in'?'Paisa':'Kharcha'),o={t:F.t,c,e:F.e||(F.t=='in'?'💰':F.t=='sv'?'🐷':'🧾'),a,d:F.d,p:F.t=='sv'?0:F.p};
+if(ed)Object.assign(ed,o);else S.tx.push({id:'t'+Date.now(),...o});save();cl();R();toast('Save ho gaya ✓')}
+function del(){ask('Yeh entry delete karein?',()=>{S.tx=S.tx.filter(x=>x!==ed);save();R()})}
+/* secure backup: AES-256-GCM, key from password via PBKDF2 (310k rounds) */
+const b64=u=>{let s='';new Uint8Array(u).forEach(c=>s+=String.fromCharCode(c));return btoa(s)},ub=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+async function dk(pw,salt,it){const m=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);return crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:it,hash:'SHA-256'},m,{name:'AES-GCM',length:256},false,['encrypt','decrypt'])}
+async function enc(pw){const salt=crypto.getRandomValues(new Uint8Array(16)),iv=crypto.getRandomValues(new Uint8Array(12)),it=310000,ct=await crypto.subtle.encrypt({name:'AES-GCM',iv},await dk(pw,salt,it),new TextEncoder().encode(JSON.stringify(S)));return JSON.stringify({app:'paisa-plan',v:1,it,salt:b64(salt),iv:b64(iv),data:b64(ct)})}
+async function dec(pw,txt){const f=JSON.parse(txt);if(f.app!='paisa-plan')throw 0;return JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:ub(f.iv)},await dk(pw,ub(f.salt),f.it),ub(f.data))))}
+async function saveFile(name,text){const C=window.Capacitor;
+if(C&&C.isNativePlatform&&C.isNativePlatform()){const P=C.Plugins,r=await P.Filesystem.writeFile({path:name,data:text,directory:'CACHE',encoding:'utf8'});await P.Share.share({title:'Paisa Plan backup',url:r.uri,dialogTitle:'Backup file save karein'});return}
+if(window.claude&&claude.use){const d=await claude.use('downloads');if(d){await d.save({filename:name,data:text});return}}
+const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([text],{type:name.endsWith('.pdf')?'application/pdf':'application/json'}));a.download=name;document.body.appendChild(a);a.click();a.remove()}
+function bkSheet(){show(`<h3>🔒 Backup ka password</h3><div class="sm mu">Kam az kam 6 harf/number. Yeh password kahin likh kar rakhein.</div><label>Password</label><input id="p1" type="password"><label>Dobara likhein</label><input id="p2" type="password"><div style="margin-top:14px;display:grid;gap:8px"><button class="bt" onclick="doBk()">Backup banayein</button><button class="bt s" onclick="cl()">Cancel</button></div>`)}
+async function doBk(){const p=$('#p1').value;if(p.length<6)return toast('Password chhota hai');if(p!=$('#p2').value)return toast('Dono password alag hain');
+try{const t=await enc(p);await saveFile('paisa-plan-backup-'+td+'.json',t);S.lastBk=Date.now();save();cl();R();toast('Backup tayyar ✓')}catch(e){if(!e||e.code!='declined')toast('Backup nahi ban saka')}}
+function pick(i){const f=i.files[0];if(!f)return;f.text().then(t=>{RT=t;show(`<h3>📂 Backup wapas laayein</h3><div class="sm mu">Maujooda data is backup se badal jayega.</div><label>Backup ka password</label><input id="rp" type="password"><div style="margin-top:14px;display:grid;gap:8px"><button class="bt" onclick="doRs()">Wapas laayein</button><button class="bt s" onclick="cl()">Cancel</button></div>`)});i.value=''}
+async function doRs(){try{const d=await dec($('#rp').value,RT);if(!d.tx)throw 0;S=d;save();cl();tab='home';R();toast('Data wapas aa gaya ✓')}catch(e){toast('Password ghalat ya file kharab hai')}}
+/* Hisaab slip: text PDF, offline, koi library nahi */
+function mkPdf(L){const per=62,P=[],ob=[];for(let i=0;i<L.length;i+=per)P.push(L.slice(i,i+per));
+ob[1]='<</Type/Catalog/Pages 2 0 R>>';ob[2]=`<</Type/Pages/Kids[${P.map((_,i)=>(5+i*2)+' 0 R').join(' ')}]/Count ${P.length}>>`;
+ob[3]='<</Type/Font/Subtype/Type1/BaseFont/Courier>>';ob[4]='<</Type/Font/Subtype/Type1/BaseFont/Courier-Bold>>';
+P.forEach((pg,i)=>{let c='';pg.forEach((l,j)=>{c+=`BT /F${l.b?2:1} 9 Tf 1 0 0 1 40 ${792-j*12} Tm (${l.t.replace(/[\\()]/g,'\\$&')}) Tj ET\n`});
+ob[5+i*2]=`<</Type/Page/Parent 2 0 R/MediaBox[0 0 595 842]/Resources<</Font<</F1 3 0 R/F2 4 0 R>>>>/Contents ${6+i*2} 0 R>>`;ob[6+i*2]=`<</Length ${c.length}>>\nstream\n${c}endstream`});
+let o='%PDF-1.4\n',f=[];for(let i=1;i<ob.length;i++){f[i]=o.length;o+=`${i} 0 obj\n${ob[i]}\nendobj\n`}
+const x=o.length;return o+`xref\n0 ${ob.length}\n0000000000 65535 f \n`+f.slice(1).map(v=>String(v).padStart(10,'0')+' 00000 n \n').join('')+`trailer\n<</Size ${ob.length}/Root 1 0 R>>\nstartxref\n${x}\n%%EOF`}
+function slip(all){const A=all?S.tx:S.tx.filter(x=>x.d.startsWith(M)),st=stats(all?'9999-12':M),N=v=>Math.round(v).toLocaleString('en-US'),Z=s=>String(s).replace(/[^\x20-\x7E]/g,'').trim()||'-',pd=(s,w)=>Z(s).slice(0,w).padEnd(w),pL=(v,w)=>String(v).padStart(w),
+EQ='='.repeat(88),DS='-'.repeat(88),O=[],w=(t,b)=>O.push({t,b}),dn=A.filter(x=>!x.p).sort((a,b)=>a.d.localeCompare(b.d)),g=t=>sum(dn.filter(x=>x.t==t));
+w('PAISA PLAN - HISAAB SLIP',1);w('Period      : '+(all?'Sab mahine':mlab(M)));w('Banayi gayi : '+td);w(EQ);
+w('SUMMARY',1);[['Shuruati cash (opening)',S.cash],['Total aamdani (mil gaye)',g('in')],['Total kharcha (de diye)',g('ex')],['Total saving (alag ki)',g('sv')],['Abhi cash (hath mein)',st.cash],['Baqi aane wale',st.pin],['Baqi dene wale',st.pout],['Sab ke baad bachega',st.proj],['Monthly saving goal',S.goal]].forEach(([l,v])=>w(pd(l,34)+pL('Rs '+N(v),18)));
+if(all){w('');w('MAHINE-WAR',1);w(pd('Mahina',12)+pL('Aamdani',14)+pL('Kharcha',14)+pL('Saving',14)+pL('Bachat',14),1);w(DS);
+[...new Set(dn.map(x=>x.d.slice(0,7)))].forEach(m=>{const q=dn.filter(x=>x.d.startsWith(m)),a=sum(q.filter(x=>x.t=='in')),b=sum(q.filter(x=>x.t=='ex')),c=sum(q.filter(x=>x.t=='sv'));w(pd(m,12)+pL(N(a),14)+pL(N(b),14)+pL(N(c),14)+pL(N(a-b-c),14))})}
+w('');w('SAVING KI ENTRIES',1);const sv=dn.filter(x=>x.t=='sv');sv.forEach(x=>w(pd(x.d,12)+pd(x.c,40)+pL(N(x.a),16)));if(!sv.length)w('(koi saving nahi)');w(DS);w(pd('Total saving',52)+pL(N(g('sv')),16),1);
+w('');w('AAYA / DIYA / SAVING (tareekh-war)',1);w(pd('Tareekh',11)+pd('Type',8)+pd('Naam',28)+pL('Amount',14)+pL('Balance',16),1);w(DS);
+let b=S.cash+(all?0:S.tx.filter(x=>!x.p&&x.d<M+'-01').reduce((s,x)=>s+(x.t=='in'?x.a:-x.a),0));w(pd('',11)+pd('',8)+pd('Shuru ka balance',28)+pL('',14)+pL(N(b),16));
+dn.forEach(x=>{b+=x.t=='in'?x.a:-x.a;w(pd(x.d,11)+pd(x.t=='in'?'AAYA':x.t=='ex'?'DIYA':'SAVING',8)+pd(x.c,28)+pL((x.t=='in'?'+':'-')+N(x.a),14)+pL(N(b),16))});
+w('');w('BAQI PAYMENTS',1);w(pd('Tareekh',11)+pd('Type',8)+pd('Naam',28)+pL('Amount',14)+pL('Halat',16),1);w(DS);const pe=A.filter(x=>x.p).sort((a,b)=>a.d.localeCompare(b.d));
+pe.forEach(x=>w(pd(x.d,11)+pd(x.t=='in'?'AANA':'DENA',8)+pd(x.c,28)+pL(N(x.a),14)+pL(x.d<td?'LATE':'baqi',16)));if(!pe.length)w('(koi baqi payment nahi)');
+w('');w(EQ);w('Yeh slip Paisa Plan app se banayi gayi hai.');return O}
+function slipSheet(){show(`<h3>🧾 Hisaab ki slip (PDF)</h3><div class="sm mu">Saving, aamdani, kharcha aur baqi payments ek saaf PDF mein. Urdu harf ya emoji PDF mein nahi aate.</div><div style="margin-top:14px;display:grid;gap:8px"><button class="bt" onclick="genSlip(0)">Sirf ${mlab(M)}</button><button class="bt s" onclick="genSlip(1)">Sab mahine</button><button class="bt s" onclick="cl()">Cancel</button></div>`)}
+async function genSlip(all){cl();try{await saveFile('paisa-plan-slip-'+(all?'sab':M)+'.pdf',mkPdf(slip(all)));toast('Slip tayyar ✓')}catch(e){if(!e||e.code!='declined')toast('Slip nahi ban saki')}}
+R();
+</script></body></html>
